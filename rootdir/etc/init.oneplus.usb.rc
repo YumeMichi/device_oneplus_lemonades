@@ -32,6 +32,5 @@ on property:sys.boot_completed=1
 
 service dashd /vendor/bin/dashd
     class core
-    critical
     seclabel u:r:dashd:s0
     group root system
