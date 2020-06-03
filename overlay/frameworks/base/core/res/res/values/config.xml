@@ -734,6 +734,9 @@
         <item>org.lineageos.settings.device.KeyHandler</item>
     </string-array>
 
+    <!-- Whether device has physical alert slider. -->
+    <bool name="config_hasAlertSlider">true</bool>
+
     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
     <integer-array name="config_udfps_sensor_props" translatable="false" >
     <!--
