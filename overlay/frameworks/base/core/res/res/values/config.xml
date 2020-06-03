@@ -737,6 +737,11 @@
     <!-- Whether device has physical alert slider. -->
     <bool name="config_hasAlertSlider">true</bool>
 
+    <!-- The location of the devices physical alert slider.
+         0: Left
+         1: Right -->
+    <integer name="config_alertSliderLocation">1</integer>
+
     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
     <integer-array name="config_udfps_sensor_props" translatable="false" >
     <!--
