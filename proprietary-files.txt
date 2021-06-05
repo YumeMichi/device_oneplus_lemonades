@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OnePlus8ProOxygen_15.E.36_OTA_0360_all_2105181828_5d18f419b
+# All unpinned blobs below are extracted from OnePlus9ROxygen_13.I.02_OTA_0020_all_2104090043_3793108ba578
 
 # ADSP
 vendor/bin/adsprpcd
@@ -82,16 +82,18 @@ vendor/lib64/libbtnv.so
 # Bluetooth (A2DP)
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
@@ -239,9 +241,6 @@ vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 # CNE
 -vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
-vendor/etc/cne/Nexus/ATT/ATT_profiles.xml
-vendor/etc/cne/Nexus/ROW/ROW_profiles.xml
-vendor/etc/cne/Nexus/VZW/VZW_profiles.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
@@ -645,7 +644,6 @@ vendor/lib/libsmwrapper.so
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib64/libmmosal.so
-vendor/etc/seccomp_policy/codec2.vendor.base.policy
 vendor/etc/system_properties.xml
 vendor/lib64/libmmosal.so
 
@@ -753,8 +751,8 @@ vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
 # Perf
-vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
-vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc
+vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
+vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
@@ -947,6 +945,7 @@ vendor/lib64/ls_nq_client.so
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.sensors.rc
