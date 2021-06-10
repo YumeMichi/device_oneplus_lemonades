@@ -65,11 +65,13 @@ vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
-vendor/firmware/tfa98xx.cnt
 vendor/lib/libacdbrtac.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdb-fts.so
 vendor/lib/soundfx/libhaptic_effect.so
+
+# Audio firmware - OnePlus9Oxygen_22.I.08_GLO_0080_2105011324
+vendor/firmware/tfa98xx.cnt|5578bfb86a4123af049c2885af7b30d3fd0a53e4
 
 # Audio - LA.UM.9.12.r1-10800-SMxx50.0
 vendor/lib/vendor.qti.voiceprint@1.0.so
@@ -576,6 +578,38 @@ vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 # Diag - LA.UM.9.12.r1-10800-SMxx50.0
 vendor/lib/libdiag.so
 vendor/lib64/libdiag.so
+
+# Dolby
+-system_ext/app/OPOnlineConfig/OPOnlineConfig.apk
+-system_ext/app/OPSoundTuner/OPSoundTuner.apk
+-system_ext/priv-app/daxService/daxService.apk
+system/lib64/vendor.dolby.hardware.dms@2.0.so
+system_ext/etc/permissions/com.dolby.daxservice.xml
+system_ext/etc/permissions/com.oneplus.software.xml
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/lib/soundfx/libeffectproxy.so
+vendor/lib/soundfx/libhwdap.so
+vendor/lib/soundfx/libswdap.so
+vendor/lib/soundfx/libswgamedap.so
+vendor/lib/libdapparamstorage.so
+vendor/lib/libdeccfg.so
+vendor/lib/libstagefright_soft_ac4dec.so
+vendor/lib/libstagefright_soft_ddpdec.so
+vendor/lib/libstagefrightdolby.so
+vendor/lib/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/soundfx/libeffectproxy.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdeccfg.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/libstagefright_soft_ac4dec.so
+vendor/lib64/libstagefright_soft_ddpdec.so
+vendor/lib64/libstagefrightdolby.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Feature enabler client
 vendor/bin/feature_enabler_client
