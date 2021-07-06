@@ -126,6 +126,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl \
+    bt-mac-generator \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     libbluetooth_audio_session \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \

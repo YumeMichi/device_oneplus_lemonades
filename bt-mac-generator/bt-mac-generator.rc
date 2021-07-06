@@ -1,0 +1,11 @@
+service vendor.bt-mac-generator-sh /vendor/bin/bt-mac-generator ${ro.serialno}
+    class main
+    user bluetooth
+    group bluetooth
+    oneshot
+    disabled
+    seclabel u:r:bt_mac_generator:s0
+
+on post-fs-data
+    start vendor.bt-mac-generator-sh
+    restart vendor.bluetooth-1-0-qti
