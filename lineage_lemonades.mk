@@ -18,23 +18,23 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from kebab device
-$(call inherit-product, device/oneplus/kebab/device.mk)
+# Inherit from lemonades device
+$(call inherit-product, device/oneplus/lemonades/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_kebab
-PRODUCT_DEVICE := kebab
+PRODUCT_NAME := lineage_lemonades
+PRODUCT_DEVICE := lemonades
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := KB2003
+PRODUCT_MODEL := LE2101
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=OnePlus8T \
-    PRODUCT_NAME=OnePlus8T_EEA \
-    PRIVATE_BUILD_DESC="OnePlus8T-user 11   release-keys"
+    PRODUCT_DEVICE=OnePlus9R \
+    PRODUCT_NAME=OnePlus9R_IND \
+    PRIVATE_BUILD_DESC="OnePlus9R-user 11   release-keys"
 
-BUILD_FINGERPRINT := OnePlus/OnePlus8T_EEA/OnePlus8T:11/RP1A.201005.001/2011101425:user/release-keys
+BUILD_FINGERPRINT := OnePlus/OnePlus9R_IND/OnePlus9R:11/RKQ1.201112.002/2104090029:user/release-keys
