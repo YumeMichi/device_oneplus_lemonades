@@ -37,14 +37,14 @@ oneplus_kona_fod_hal_cc_defaults {
 }
 
 cc_binary {
-    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona",
+    name: "vendor.aospa.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona",
     defaults: [
         "hidl_defaults",
         "oneplus_kona_fod_hal_defaults",
     ],
     relative_install_path: "hw",
-    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona.rc"],
-    vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona.xml"],
+    init_rc: ["vendor.aospa.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona.rc"],
+    vintf_fragments: ["vendor.aospa.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona.xml"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
     shared_libs: [
         "libbase",
@@ -52,9 +52,9 @@ cc_binary {
         "libhidlbase",
         "liblog",
         "libutils",
-        "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
-        "//device/oneplus/common:vendor.oneplus.fingerprint.extension@1.0",
-        "//device/oneplus/common:vendor.oneplus.hardware.display@1.0",
+        "vendor.aospa.biometrics.fingerprint.inscreen@1.0",
+        "vendor.oneplus.fingerprint.extension@1.0",
+        "vendor.oneplus.hardware.display@1.0",
     ],
     proprietary: true,
 }

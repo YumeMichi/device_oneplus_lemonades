@@ -1,4 +1,3 @@
-#
 # Copyright 2020-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 LOCAL_PATH := $(call my-dir)
 
@@ -26,14 +24,14 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_C_INCLUDES += \
     $(call include-path-for, audio-route) \
     $(call include-path-for, audio-utils) \
-    $(call project-path-for, qcom-audio)/hal \
-    $(call project-path-for, qcom-audio)/hal/audio_extn \
-    $(call project-path-for, qcom-audio)/hal/msm8974 \
-    external/tinycompress/include
+    external/tinycompress/include \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal/audio_extn \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal/msm8974 \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal
 
 LOCAL_HEADER_LIBRARIES += \
-    generated_kernel_headers \
-    libhardware_headers
+    libhardware_headers \
+    qti_kernel_headers
 
 LOCAL_SHARED_LIBRARIES += \
     audio.primary.$(TARGET_BOARD_PLATFORM) \
