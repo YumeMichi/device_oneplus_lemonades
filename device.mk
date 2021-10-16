@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
@@ -391,7 +393,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     oneplus-fwk.oneplus_kona
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     oneplus-fwk.oneplus_kona
 
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -438,7 +440,7 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
@@ -522,7 +524,7 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_BUILD_SUPER_PARTITION := false
