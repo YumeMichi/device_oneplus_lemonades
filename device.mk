@@ -523,7 +523,11 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-#PRODUCT_BOOT_JARS += \
+PRODUCT_PACKAGES += \
+    WfdService \
+    WfdCommon
+
+PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_BUILD_SUPER_PARTITION := false
