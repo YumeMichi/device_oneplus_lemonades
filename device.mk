@@ -399,7 +399,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     oneplus-fwk.oneplus_kona
 
-#PRODUCT_BOOT_JARS += \
+PRODUCT_BOOT_JARS += \
     oneplus-fwk.oneplus_kona
 
 PRODUCT_SHIPPING_API_LEVEL := 30
