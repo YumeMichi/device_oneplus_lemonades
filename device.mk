@@ -526,10 +526,11 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
+    libdisplayconfig.system.qti \
     libnl \
     libwfdaac_vendor
 
-#PRODUCT_BOOT_JARS += \
+PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_BUILD_SUPER_PARTITION := false
