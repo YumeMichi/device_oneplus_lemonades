@@ -14,12 +14,21 @@
  * limitations under the License.
  */
 
-#include <compositionengine/FodExtension.h>
+#include <compositionengine/UdfpsExtension.h>
+#include <vendor/oneplus/hardware/display/1.0/IOneplusDisplay.h>
 
-uint32_t getFodZOrder(uint32_t z, bool touched) {
+#define OP_DISPLAY_SET_DIM 10
+
+using ::android::sp;
+using ::vendor::oneplus::hardware::display::V1_0::IOneplusDisplay;
+
+static const sp<IOneplusDisplay> gVendorDisplayService = IOneplusDisplay::getService();
+
+uint32_t getUdfpsZOrder(uint32_t z, bool touched) {
+    gVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, !!touched);
     return touched ? 0xfc8 : z;
 }
 
-uint64_t getFodUsageBits(uint64_t usageBits, bool) {
+uint64_t getUdfpsUsageBits(uint64_t usageBits, bool) {
     return usageBits;
 }
