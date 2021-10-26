@@ -1518,8 +1518,8 @@ vendor/lib64/libwvhidl.so
 # WiFi
 vendor/bin/cnss-daemon
 
-# Telephony (qti-telephony-common) - from DRG - QKQ1.190828.002
-product/framework/qti-telephony-common.jar|b4d187700f279cdbd40e74b4c3be4504f10d8b29
+# Telephony (qti-telephony-common)
+system_ext/framework/qti-telephony-common.jar|731ca16c90da40c77fc296004c689e18a73678bf
 
 # WiFi Display
 system_ext/bin/wfdservice
