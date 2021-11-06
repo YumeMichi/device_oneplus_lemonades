@@ -1518,9 +1518,6 @@ vendor/lib64/libwvhidl.so
 # WiFi
 vendor/bin/cnss-daemon
 
-# Telephony (qti-telephony-common)
-system_ext/framework/qti-telephony-common.jar|731ca16c90da40c77fc296004c689e18a73678bf
-
 # WiFi Display
 -system/framework/WfdCommon.jar
 system_ext/bin/wfdservice
