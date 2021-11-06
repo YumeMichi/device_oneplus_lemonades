@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,38 +14,37 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.oneplus_kona"
+#define LOG_TAG "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_kona"
 
 #include <android-base/logging.h>
-#include <hidl/HidlSupport.h>
 #include <hidl/HidlTransportSupport.h>
-#include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
-#include "BiometricsFingerprint.h"
 
-using android::hardware::biometrics::fingerprint::V2_3::IBiometricsFingerprint;
-using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
+#include "FingerprintInscreen.h"
+
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
-using android::sp;
+
+using vendor::lineage::biometrics::fingerprint::inscreen::V1_0::IFingerprintInscreen;
+using vendor::lineage::biometrics::fingerprint::inscreen::V1_0::implementation::FingerprintInscreen;
 
 using android::OK;
 using android::status_t;
 
 int main() {
-    android::sp<IBiometricsFingerprint> service = new BiometricsFingerprint();
+    android::sp<IFingerprintInscreen> service = new FingerprintInscreen();
 
-    configureRpcThreadpool(1, true /*callerWillJoin*/);
+    configureRpcThreadpool(1, true);
 
     status_t status = service->registerAsService();
     if (status != OK) {
-        LOG(ERROR) << "Cannot register Biometrics 2.3 HAL service.";
+        LOG(ERROR) << "Cannot register FOD HAL service.";
         return 1;
     }
-    LOG(INFO) << "Biometrics 2.3 HAL service ready.";
+
+    LOG(INFO) << "FOD HAL service ready.";
 
     joinRpcThreadpool();
 
-    LOG(ERROR) << "Biometrics 2.3 HAL service failed to join thread pool.";
-
-    return 1; // should never get here
+    LOG(ERROR) << "FOD HAL service failed to join thread pool.";
+    return 1;
 }

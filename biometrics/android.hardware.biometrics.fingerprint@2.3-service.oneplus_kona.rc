@@ -1,4 +1,0 @@
-service fps_hal.oneplus_kona /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.oneplus_kona
-    class late_start
-    user system
-    group system input uhid
