@@ -26,12 +26,46 @@
 #include <inttypes.h>
 #include <unistd.h>
 
+#define FINGERPRINT_ACQUIRED_VENDOR 6
+#define FINGERPRINT_ERROR_VENDOR 8
+
 #define OP_ENABLE_FP_LONGPRESS 3
 #define OP_DISABLE_FP_LONGPRESS 4
 #define OP_RESUME_FP_ENROLL 8
 #define OP_FINISH_FP_ENROLL 10
 #define OP_DISPLAY_SET_DIM 10
 #define OP_DISPLAY_NOTIFY_PRESS 9
+#define OP_DISPLAY_AOD_MODE 8
+
+#define DC_DIM_PATH "/sys/class/drm/card0-DSI-1/dimlayer_bl_en"
+#define NATIVE_DISPLAY_LOADING_EFFECT "/sys/class/drm/card0-DSI-1/native_display_loading_effect_mode"
+#define NATIVE_DISPLAY_CUSTOMER_P3 "/sys/class/drm/card0-DSI-1/native_display_customer_p3_mode"
+#define NATIVE_DISPLAY_CUSTOMER_SRGB "/sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode"
+#define NATIVE_DISPLAY_P3 "/sys/class/drm/card0-DSI-1/native_display_p3_mode"
+#define NATIVE_DISPLAY_SRGB "/sys/class/drm/card0-DSI-1/native_display_srgb_color_mode"
+#define NATIVE_DISPLAY_WIDE "/sys/class/drm/card0-DSI-1/native_display_wide_color_mode"
+
+
+int c_p3,c_srgb,p3,srgb,wide;
+bool dcDimState;
+
+/*
+ * Write value to path and close file.
+ */
+template <typename T>
+static void set(const std::string& path, const T& value) {
+	std::ofstream file(path);
+	file << value;
+}
+
+template <typename T>
+static T get(const std::string& path, const T& def) {
+	std::ifstream file(path);
+	T result;
+
+	file >> result;
+	return file.fail() ? def : result;
+}
 
 namespace android {
 namespace hardware {
@@ -86,6 +120,43 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 Return<void> BiometricsFingerprint::onFingerUp() {
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
+    return Void();
+}
+
+Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
+    c_p3 = get(NATIVE_DISPLAY_CUSTOMER_P3, 0);
+    c_srgb = get(NATIVE_DISPLAY_CUSTOMER_SRGB, 0);
+    p3 = get(NATIVE_DISPLAY_P3, 0);
+    srgb = get(NATIVE_DISPLAY_SRGB, 0);
+    wide = get(NATIVE_DISPLAY_WIDE, 0);
+    dcDimState = get(DC_DIM_PATH, 0);
+    set(DC_DIM_PATH, 0);
+    set(NATIVE_DISPLAY_SRGB, 0);
+    set(NATIVE_DISPLAY_P3, 0);
+    set(NATIVE_DISPLAY_CUSTOMER_P3, 0);
+    set(NATIVE_DISPLAY_CUSTOMER_SRGB, 0);
+    set(NATIVE_DISPLAY_LOADING_EFFECT, 1);
+    set(NATIVE_DISPLAY_WIDE, 1);
+
+    return Void();
+}
+
+Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
+    set(NATIVE_DISPLAY_CUSTOMER_P3, 0);
+    set(NATIVE_DISPLAY_CUSTOMER_SRGB, 0);
+    set(NATIVE_DISPLAY_P3, 0);
+    set(NATIVE_DISPLAY_SRGB, 0);
+    set(NATIVE_DISPLAY_LOADING_EFFECT, 0);
+    set(NATIVE_DISPLAY_WIDE, 0);
+    set(NATIVE_DISPLAY_CUSTOMER_P3, c_p3);
+    set(NATIVE_DISPLAY_CUSTOMER_SRGB, c_srgb);
+    set(NATIVE_DISPLAY_P3, p3);
+    set(NATIVE_DISPLAY_SRGB, srgb);
+    set(NATIVE_DISPLAY_WIDE, wide);
+    set(DC_DIM_PATH, dcDimState);
+
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
+
     return Void();
 }
 
