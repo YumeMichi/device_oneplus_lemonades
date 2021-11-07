@@ -354,13 +354,6 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.0.vendor \
-    vendor.qti.hardware.perf@2.1.vendor \
-    vendor.qti.hardware.perf@2.2.vendor
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
@@ -374,6 +367,7 @@ TARGET_BOARD_PLATFORM := kona
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     audio \
+    perf \
     wfd
 
 # RIL
