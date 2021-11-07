@@ -26,10 +26,10 @@ LOCAL_VENDOR_MODULE := true
 LOCAL_C_INCLUDES += \
     $(call include-path-for, audio-route) \
     $(call include-path-for, audio-utils) \
-    $(call project-path-for, qcom-audio)/hal \
-    $(call project-path-for, qcom-audio)/hal/audio_extn \
-    $(call project-path-for, qcom-audio)/hal/msm8974 \
-    external/tinycompress/include
+    external/tinycompress/include \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal/audio_extn \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal/msm8974 \
+    vendor/qcom/opensource/audio-hal/primary-hal/hal
 
 LOCAL_HEADER_LIBRARIES += \
     generated_kernel_headers \
