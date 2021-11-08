@@ -373,7 +373,8 @@ PRODUCT_PACKAGES += \
 TARGET_BOARD_PLATFORM := kona
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
-    audio
+    audio \
+    wfd
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -484,14 +485,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg_setchain.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg_setchain.ini \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libnl \
-    libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
