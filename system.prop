@@ -50,9 +50,6 @@ vendor.iop.enable_uxe=0
 # IORap I/O Prefetching
 persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
 
-# Media
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
 
