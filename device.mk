@@ -234,13 +234,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
-# IPACM
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml \
-    libipanat \
-    liboffloadhal
-
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
@@ -256,7 +249,6 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
@@ -273,13 +265,12 @@ TARGET_COMMON_QTI_COMPONENTS := \
     media-legacy \
     nq-nfc \
     perf \
+    telephony \
     wfd
 
 # RIL
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full \
-    librmnetctl \
-    libxml2
+    libprotobuf-cpp-full
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -292,10 +283,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    extphonelib \
-    extphonelib-product \
-    extphonelib.xml \
-    extphonelib_product.xml \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \

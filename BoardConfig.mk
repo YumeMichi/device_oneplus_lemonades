@@ -145,7 +145,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
 CUSTOM_APNS_FILE := $(DEVICE_PATH)/configs/apns-conf.xml
-ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-09-01
