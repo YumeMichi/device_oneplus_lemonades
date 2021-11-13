@@ -29,9 +29,6 @@ debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
 persist.vendor.color.matrix=2
 
-# CNE
-persist.vendor.cne.feature=1
-
 # DPM
 persist.vendor.dpm.feature=9
 
@@ -66,7 +63,6 @@ persist.vendor.qti.inputopts.movetouchslop=0.6
 
 # Netmgr
 persist.vendor.data.iwlan.enable=true
-persist.vendor.data.mode=concurrent
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
