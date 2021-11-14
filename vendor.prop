@@ -81,24 +81,6 @@ persist.sys.oem.otg_support=true
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
 
-# Radio
-persist.radio.snapshot_enabled=0
-persist.radio.snapshot_timer=0
-persist.rcs.otp_sms_port=0
-persist.rcs.supported=1
-persist.vendor.data.iwlan.enable=true
-persist.vendor.radio.5g_mode_pref=1
-persist.vendor.radio.arfcn_test_mode=3
-persist.vendor.radio.bar_fake_gcell=1
-persist.vendor.radio.data_con_rprt=1
-persist.vendor.radio.data_ltd_sys_ind=1
-persist.vendor.radio.efssync=true
-persist.vendor.radio.force_on_dc=true
-persist.vendor.radio.ignore_dom_time=10
-persist.vendor.radio.process_sups_ind=1
-persist.vendor.radio.uicc_se_enabled=true
-ro.com.android.dataroaming=false
-
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.sync_request=true
