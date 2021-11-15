@@ -1,0 +1,3 @@
+allow surfaceflinger hal_display_hwservice:hwservice_manager find;
+
+binder_call(surfaceflinger, hal_display_default)
