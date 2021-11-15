@@ -61,6 +61,9 @@ function blob_fixup() {
         vendor/lib64/libgf_ud_hal.so|vendor/lib64/libgf_g6_ud_hal.so)
             sed -i "s|vendor.boot.verifiedbootstate|vendor.boot.fingerprintbstate|g" "${2}"
             ;;
+        vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
+            sed -i 's|\x21\x00\x80\x52\x9A\x0A\x00\x94|\x21\x00\x80\x52\x1F\x20\x03\xD5|g' "${2}"
+            ;;
     esac
 }
 
