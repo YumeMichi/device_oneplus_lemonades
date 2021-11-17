@@ -195,6 +195,9 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
+    libinit_kona
+
+PRODUCT_PACKAGES += \
     fstab.qcom \
     init.oneplus.camera.rc \
     init.oneplus.display.rc \
