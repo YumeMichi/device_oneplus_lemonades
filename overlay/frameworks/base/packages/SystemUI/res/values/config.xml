@@ -40,6 +40,9 @@
     -->
     <integer name="config_udfps_hbm_type">0</integer>
 
+    <!-- Udfps vendor code -->
+    <integer name="config_udfps_vendor_code">0</integer>
+
     <!-- Alert Slider UI -->
     <dimen name="tri_state_down_dialog_position">565px</dimen>
     <dimen name="tri_state_down_dialog_position_l">550px</dimen>
