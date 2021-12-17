@@ -17,16 +17,16 @@
 -->
 <resources>
     <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
-    <dimen name="config_rounded_mask_size_bottom">118px</dimen>
+    <dimen name="config_rounded_mask_size">97px</dimen>
 
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">8px</dimen>
 
     <!-- the padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">24px</dimen>
+    <dimen name="status_bar_padding_end">8px</dimen>
 
     <!-- the padding on the top of the statusbar (usually 0) -->
-    <dimen name="status_bar_padding_top">32px</dimen>
+    <dimen name="status_bar_padding_top">28px</dimen>
 
     <!-- Height of the status bar header bar when on Keyguard -->
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
@@ -35,8 +35,5 @@
     <dimen name="keyguard_carrier_text_margin">@dimen/status_bar_padding_start</dimen>
 
     <!-- Margin on the right side of the system icon group on Keyguard. -->
-    <dimen name="system_icons_keyguard_padding_end">16px</dimen>
-
-    <!-- How much into a DisplayCutout's bounds we can go, on each side -->
-    <dimen name="display_cutout_margin_consumption">68px</dimen>
+    <dimen name="system_icons_keyguard_padding_end">24px</dimen>
 </resources>
