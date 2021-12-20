@@ -256,6 +256,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     display \
     gps \
+    hidl \
     init \
     media-legacy \
     nq-nfc \
