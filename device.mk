@@ -14,8 +14,7 @@
 # limitations under the License.
 #
 
-# Clang
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+TARGET_BOARD_PLATFORM := kona
 
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -507,4 +506,4 @@ PRODUCT_PACKAGES += \
     libtinyxml.vendor
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/oneplus/lemonades/lemonades-vendor.mk)
+$(call inherit-product, vendor/oneplus/oneplus9r/oneplus9r-vendor.mk)

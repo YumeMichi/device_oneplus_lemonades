@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=lemonades
+DEVICE=oneplus9r
 VENDOR=oneplus
 
 # Load extract_utils and do some sanity checks

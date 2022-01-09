@@ -32,8 +32,8 @@ LOCAL_C_INCLUDES += \
     vendor/qcom/opensource/audio-hal/primary-hal/hal
 
 LOCAL_HEADER_LIBRARIES += \
-    generated_kernel_headers \
-    libhardware_headers
+    libhardware_headers \
+    qti_kernel_headers
 
 LOCAL_SHARED_LIBRARIES += \
     audio.primary.$(TARGET_BOARD_PLATFORM) \

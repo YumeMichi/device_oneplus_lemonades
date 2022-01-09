@@ -19,13 +19,14 @@ cc_binary {
         "android.hardware.biometrics.fingerprint@2.1",
         "android.hardware.biometrics.fingerprint@2.2",
         "android.hardware.biometrics.fingerprint@2.3",
-        "//device/oneplus/lemonades:vendor.oneplus.fingerprint.extension@1.0",
-        "//device/oneplus/lemonades:vendor.oneplus.hardware.display@1.0",        
+        "//device/oneplus/oneplus9r:vendor.oneplus.fingerprint.extension@1.0",
+        "//device/oneplus/oneplus9r:vendor.oneplus.hardware.display@1.0",        
     ],
 }
 cc_library_static {
     name: "libudfps_extension.oneplus_kona",
     srcs: ["UdfpsExtension.cpp"],
+    whole_static_libs: ["//device/oneplus/oneplus9r:vendor.oneplus.hardware.display@1.0"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include",
     ],
