@@ -70,23 +70,17 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
 # Sensors
-odm/etc/sensor/config/kona_T0_sx9324_0.json
-odm/etc/sensor/config/kona_T0_sx9324up_0.json
-odm/etc/sensor/config/kona_ak991x_0.json
-odm/etc/sensor/config/kona_bmi26x_0.json
-odm/etc/sensor/config/kona_bmp380_0.json
-odm/etc/sensor/config/kona_mmc5603x_0.json
+odm/etc/sensor/config/kona_qrd_ak991x_0.json
 odm/etc/sensor/config/kona_qrd_alsps.json
 odm/etc/sensor/config/kona_qrd_bmi26x_0.json
 odm/etc/sensor/config/kona_qrd_cct.json
 odm/etc/sensor/config/kona_qrd_cct_rear.json
 odm/etc/sensor/config/kona_qrd_icm4x6xx.json
+odm/etc/sensor/config/kona_qrd_lps22hh_0.json
 odm/etc/sensor/config/kona_qrd_lsm6dso.json
+odm/etc/sensor/config/kona_qrd_mmc56x3x.json
 odm/etc/sensor/config/kona_qrd_sx933x_0.json
-odm/etc/sensor/config/kona_stk2232_0.json
-odm/etc/sensor/config/kona_sx9324_0.json
-odm/etc/sensor/config/kona_sx9324up_0.json
-odm/etc/sensor/config/kona_tcs3408.json
+odm/etc/sensor/config/kona_qrd_tcs3408_rear.json
 odm/etc/sensor/sensor_config.json
 
 # WiFi
