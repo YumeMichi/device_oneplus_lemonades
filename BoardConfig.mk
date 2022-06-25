@@ -7,7 +7,7 @@
 # Include the common OEM chipset BoardConfig.
 -include device/oneplus/sm8250-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/oneplus/kebab
+DEVICE_PATH := device/oneplus/lemonades
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
@@ -40,4 +40,4 @@ SOONG_CONFIG_OPLUS_LINEAGE_TOUCH_HAL := INCLUDE_DIR
 SOONG_CONFIG_OPLUS_LINEAGE_TOUCH_HAL_INCLUDE_DIR := $(DEVICE_PATH)/touch/include
 
 # Include the proprietary files BoardConfig.
--include vendor/oneplus/kebab/BoardConfigVendor.mk
+-include vendor/oneplus/lemonades/BoardConfigVendor.mk
