@@ -1,1 +1,1 @@
-require board=kona|OnePlus8T
+require board=kona|OnePlus9R

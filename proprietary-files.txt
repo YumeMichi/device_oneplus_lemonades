@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
-## from OnePlus 8T (KB2005_11.C.21).
+## from OnePlus 9R (LE2101_11.C.20).
 
 # ACDB
 odm/etc/acdbdata/Audio_Parameter_Version.txt
@@ -35,11 +35,11 @@ odm/lib64/camera/com.qti.tuned.qtech_imx481.bin
 odm/lib64/camera/com.qti.tuned.semco_imx586.bin
 odm/lib64/camera/com.qti.tuned.shine_gc5035.bin
 odm/lib64/camera/com.qti.tuned.truly_imx471.bin
-odm/lib64/camera/com.qti_kebab.sensor.gc02m1b.so
-odm/lib64/camera/com.qti_kebab.sensor.gc5035.so
-odm/lib64/camera/com.qti_kebab.sensor.imx471.so
-odm/lib64/camera/com.qti_kebab.sensor.imx481.so
-odm/lib64/camera/com.qti_kebab.sensor.imx586.so
+odm/lib64/camera/com.qti_lemonades.sensor.gc02m1b.so
+odm/lib64/camera/com.qti_lemonades.sensor.gc5035.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx471.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx481.so
+odm/lib64/camera/com.qti_lemonades.sensor.imx586.so
 
 # Fingerprint
 odm/vendor/firmware/gfp9638.b00
