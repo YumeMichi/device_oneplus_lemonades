@@ -41,6 +41,13 @@ odm/lib64/camera/com.qti_lemonades.sensor.imx471.so
 odm/lib64/camera/com.qti_lemonades.sensor.imx481.so
 odm/lib64/camera/com.qti_lemonades.sensor.imx586.so
 
+# Display eye protection data
+odm/etc/samsung1024_amb655x_eyeprotect_data.xml
+odm/etc/samsung1024_ana6706_cinema_eyeprotect_data.xml
+odm/etc/samsung1024_ana6706_colorful_eyeprotect_data.xml
+odm/etc/samsung1024_ana6706_eyeprotect_data.xml
+odm/etc/samsung1024_ana6706_srgb_eyeprotect_data.xml
+
 # Fingerprint
 odm/vendor/firmware/gfp9638.b00
 odm/vendor/firmware/gfp9638.b01
