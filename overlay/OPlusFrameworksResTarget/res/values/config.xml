@@ -406,4 +406,7 @@
         <item>95</item>   <!-- <item>sensorRadius</item> -->
     </integer-array>
 
+    <!-- Fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">OnePlus/OnePlus9R_IND/OnePlus9R:12/RKQ1.211119.001/R.202207300316:user/release-keys</string>
+
 </resources>

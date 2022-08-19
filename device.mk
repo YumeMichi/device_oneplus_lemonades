@@ -28,9 +28,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom.ramdisk
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
@@ -47,4 +44,4 @@ PRODUCT_SOONG_NAMESPACES += \
 $(call inherit-product, device/oneplus/sm8250-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/lemonades/lemonades-vendor.mk)
+$(call inherit-product, vendor/oneplus/oneplus9r/oneplus9r-vendor.mk)
