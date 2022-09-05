@@ -33,10 +33,6 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderResTarget \
     OPlusSystemUIResTarget
 
-# SafetyNet
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/ih8sn.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/ih8sn.conf
-
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
