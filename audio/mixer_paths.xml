@@ -2782,6 +2782,8 @@
         <path name="dmic3" />
     </path>
     -->
+
+
     <path name="handset-mic">
         <ctl name="TX DEC0 MUX" value="MSM_DMIC" />
         <ctl name="TX DMIC MUX0" value="DMIC1" />
