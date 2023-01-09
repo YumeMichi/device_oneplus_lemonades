@@ -31,7 +31,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
-    OPlusSystemUIResTarget
+    OPlusSystemUIResTarget \
+    ParanoidHubResTarget
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
