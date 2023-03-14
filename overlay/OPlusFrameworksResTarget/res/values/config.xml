@@ -403,6 +403,6 @@
     </integer-array>
 
     <!-- Fingerprint from stock ROM -->
-    <string name="config_stockFingerprint" translatable="false">OnePlus/OnePlus9R_IND/OnePlus9R:13/RKQ1.211119.001/R.bc2dee+7c5e+1:user/release-keys</string>
+    <string name="config_stockFingerprint" translatable="false">OnePlus/OnePlus9R_IND/OnePlus9R:13/RKQ1.211119.001/R.d81137_1a386-b3:user/release-keys</string>
 
 </resources>
